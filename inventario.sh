@@ -35,6 +35,4 @@ elif [ "$INPUT" == "2" ]; then
 	CHARACTER=`echo "select name from characters where id_character=$ID_CHARACTER" | mysql -u consulta amongmeme | tail -1`
 	echo "Inventario de $CHARACTER con Id $ID_CHARACTER:"
 	echo "select * from characters_items_summary where id_character=$ID_CHARACTER" | mysql -u consulta amongmeme | cut -d $'\t' -f 4
-else
-	echo "Opción Incorrecta"
 fi
